@@ -1,7 +1,7 @@
 let year = 1005
-let ifLeap = "não é"
+let ifLeap = "não "
 
-if ((year%4 == 0 && year%100 != 0) || year%400 == 0){
-    ifLeap = "é"
+if ((year % 4 === 0 && year % 100 !== 0) || year % 400 === 0){
+    ifLeap = ""
 }
-console.log(`O ano ${year} ${ifLeap} bissexto`)
+console.log(`O ano ${year} ${ifLeap}é bissexto`)
