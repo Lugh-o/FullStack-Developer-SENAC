@@ -11,5 +11,5 @@ if(average >= 7){
 } else if(average < 5){
     console.log(`O aluno foi reprovado com média ${average}`)
 } else{
-    console.log(`O aluno deve prestar recuperação, precisando conseguir uma nota ${7-average} ou superior`)
+    console.log(`O aluno deve prestar recuperação, com média ${average}`)
 }

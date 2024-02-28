@@ -8,7 +8,6 @@ function solution(str, ending){
         return false
     }
     return true
-
 }
 
 console.log(solution("abc", "bc"))
