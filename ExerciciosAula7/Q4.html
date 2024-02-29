@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let currencyDollar = parseFloat(window.prompt(`Escreva o valor em dólar para a conversão:`))
+        let quotation = parseFloat(window.prompt(`Escreva a taxa de câmbio atual:`))
+        //let quotationDollar = 0.20125
+
+        let currencyConverted = currencyDollar*quotation
+        window.alert(currencyConverted.toFixed(2))
+
+    </script>
+</body>
+</html>

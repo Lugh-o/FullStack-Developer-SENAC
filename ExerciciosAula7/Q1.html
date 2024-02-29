@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        while(1){
+            input = window.prompt(`Escreva a operação que você deseja realizar: \nFormato: [valor1] [operação] [valor2]\nOperações possíveis: + - * /`)
+            inputArray = input.split(" ")
+            if(inputArray.length !== 3 ){
+                window.alert("Input Inválido (Lembre-se de espaçar os termos!)")
+                continue
+            }
+            let result = eval(inputArray[0] + inputArray[1] + inputArray[2])
+            window.alert(`O resultado é ${result}`)
+            break
+        }
+    </script>
+</body>
+</html>
