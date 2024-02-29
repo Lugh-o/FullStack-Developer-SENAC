@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos DOM</title>
+    <style>
+        div#area{
+            font: normal 20px Arial;
+            background: #b9e2d1;
+            width: 200px;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="area">
+        Hello
+    </div>
+    <script>
+
+        let a = window.document.getElementById('area')
+        a.addEventListener('mouseenter', entrar)
+        a.addEventListener('mouseleave', sair)
+        
+        function entrar() {
+            a.innerText = "World!"
+            a.style.background = '#d1b9e2'
+        }
+
+        function sair(){
+            a.innerText = "Hello"
+            a.style.background = '#b9e2d1'
+        }
+    </script>
+</body>
+</html>
