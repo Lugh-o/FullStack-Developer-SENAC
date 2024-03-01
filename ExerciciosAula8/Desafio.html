@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio</title>
+    <style>
+
+    </style>
+</head>
+<body>
+    <h1>Desafio</h1>
+    <input type="button" value = "Candidato 1" id="candidate1" onclick="candidate1()"> 
+    <input type="button" value = "Candidato 2" id="candidate2" onclick="candidate2()"> 
+    <input type="button" value = "Candidato 3" id="candidate3" onclick="candidate3()"> 
+    <input type="button" value = "Voto nulo" id="nullVote" onclick="nullVote()"> 
+    <input type="button" value = "Voto em branco" id="whiteVote" onclick="whiteVote()"> 
+    <input type="button" value = "Finalizar" id="terminate" onclick="terminate()"> 
+    <div id="output">...</div>
+    <script>
+        let candidate1Votes = 0
+        let candidate2Votes = 0
+        let candidate3Votes = 0
+        let nullVotes = 0
+        let whiteVotes = 0
+        let output = window.document.getElementById("output")
+
+
+        function candidate1(){
+            candidate1Votes++
+            output.innerHTML = "Voto no candidato 1 contabilizado!"
+        }
+        function candidate2(){
+            candidate2Votes++
+            output.innerHTML = "Voto no candidato 2 contabilizado!"
+        }
+        function candidate3(){
+            candidate3Votes++
+            output.innerHTML = "Voto no candidato 3 contabilizado!"
+        }
+        function nullVote(){
+            nullVotes++
+            output.innerHTML = "Voto nulo contabilizado!"
+        }
+
+        function whiteVote(){
+            whiteVotes++
+            output.innerHTML = "Voto branco contabilizado!"
+        }
+
+        function terminate(){
+            votesArray = [candidate1Votes, candidate2Votes, candidate3Votes, nullVotes, whiteVotes]
+            winnerIndex = votesArray.indexOf(Math.max(votesArray))
+
+            switch(winnerIndex){
+                case 0:
+                    output.innerHTML = "Candidato 1 venceu!"
+                    break
+                case 1:
+                    output.innerHTML = "Candidato 2 venceu!"
+                    break
+                case 2:
+                    output.innerHTML = "Candidato 3 venceu!"
+                    break
+                case 3:
+                    output.innerHTML = "Votos nulos venceram!"
+                    break
+                case 4:
+                    //brancos venceram?
+                    break
+                default:
+                    //deu merda
+                    break
+            }
+        }
+                
+
+
+    </script>
+</body>
+</html>
