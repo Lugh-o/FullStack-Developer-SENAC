@@ -5,6 +5,55 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Desafio</title>
     <style>
+        body{
+            background-color: #9f9ba2;
+            color: #000000;
+            text-align: center;
+        }
+        input{
+            font: normal 16px Arial;
+            background-color: #acab7a;
+            color: #000000;
+            padding: 15px 32px;
+            text-align: center;
+            border: 2px solid #000000
+            
+        }
+        div#container {
+            font-family: "Comic Sans MS";
+            font-size: 48px;
+            font-weight: bold;
+        }
+
+        .box {
+            border: 4px solid black;
+            width: 135px;
+            height: 135px;
+            margin: 20px;
+            background: #fff;
+            box-shadow: 0 0 0 10px #fff;
+        }
+
+        .box span {
+            display: block;
+            width: 400px;
+        }
+
+        .container {
+            background: linear-gradient(-230deg, #FE2619, #FD3EF1, #0532FD, #00F4FD, #00F800, #FBFA00, #FE2619);
+            width: 500px;
+            height: 300px;
+            padding: 20px;
+        }
+
+        .cat {
+            background: url(https://creazilla-store.fra1.digitaloceanspaces.com/cliparts/77959/kitten-with-red-bow-clipart-lg.png);
+            width: 125px;
+            height: 125px;
+            background-size: contain;
+            background-repeat: no-repeat;
+            float: right;
+        }
 
     </style>
 </head>
@@ -12,11 +61,23 @@
     <h1>Desafio</h1>
     <input type="button" value = "Candidato 1" id="candidate1" onclick="candidate1()"> 
     <input type="button" value = "Candidato 2" id="candidate2" onclick="candidate2()"> 
-    <input type="button" value = "Candidato 3" id="candidate3" onclick="candidate3()"> 
+    <input type="button" value = "Candidato 3" id="candidate3" onclick="candidate3()"> <br/><br/>
     <input type="button" value = "Voto nulo" id="nullVote" onclick="nullVote()"> 
-    <input type="button" value = "Voto em branco" id="whiteVote" onclick="whiteVote()"> 
-    <input type="button" value = "Finalizar" id="terminate" onclick="terminate()"> 
+    <input type="button" value = "Voto em branco" id="whiteVote" onclick="whiteVote()"> <br/><br/>
+    <input type="button" value = "Finalizar" id="terminate" onclick="terminate()">
+    <input type="button" value = "Reset" id="reset" onclick="reset()" style="visibility:hidden"> <br/><br/><br/>
     <div id="output">...</div>
+
+    <div class="container" id="container">
+        <div class="box">
+          <span>CSS is</span>
+          <span>my passion</span>
+        </div>
+        
+        <div class="cat"></div>
+    </div>
+    
+
     <script>
         let candidate1Votes = 0
         let candidate2Votes = 0
@@ -24,7 +85,6 @@
         let nullVotes = 0
         let whiteVotes = 0
         let output = window.document.getElementById("output")
-
 
         function candidate1(){
             candidate1Votes++
@@ -49,9 +109,9 @@
         }
 
         function terminate(){
-            votesArray = [candidate1Votes, candidate2Votes, candidate3Votes, nullVotes, whiteVotes]
-            winnerIndex = votesArray.indexOf(Math.max(votesArray))
+            votesArray = [candidate1Votes, candidate2Votes, candidate3Votes]
 
+            winnerIndex = votesArray.indexOf(Math.max(...votesArray))
             switch(winnerIndex){
                 case 0:
                     output.innerHTML = "Candidato 1 venceu!"
@@ -62,20 +122,37 @@
                 case 2:
                     output.innerHTML = "Candidato 3 venceu!"
                     break
-                case 3:
-                    output.innerHTML = "Votos nulos venceram!"
-                    break
-                case 4:
-                    //brancos venceram?
-                    break
                 default:
-                    //deu merda
+                    output.innerHTML = "Algo deu errado, reinicie a votação!"
                     break
             }
+            output.innerHTML += `<br/>Total de votos: <br/>Candidato 1: ${candidate1Votes}<br/>Candidato 2: ${candidate2Votes}<br/>Candidato 3: ${candidate3Votes}<br/>Votos Nulos: ${nullVotes}<br/>Votos em Branco: ${whiteVotes}`
+            
+            document.getElementById("candidate1").style.visibility = 'hidden';
+            document.getElementById("candidate2").style.visibility = 'hidden';
+            document.getElementById("candidate3").style.visibility = 'hidden';
+            document.getElementById("nullVote").style.visibility = 'hidden';
+            document.getElementById("whiteVote").style.visibility = 'hidden';
+            document.getElementById("terminate").style.visibility = 'hidden';
+            document.getElementById("reset").style.visibility = 'visible';
         }
-                
 
-
+        function reset(){
+            candidate1Votes = 0
+            candidate2Votes = 0
+            candidate3Votes = 0
+            nullVotes = 0
+            whiteVotes = 0
+            document.getElementById("candidate1").style.visibility = 'visible';
+            document.getElementById("candidate2").style.visibility = 'visible';
+            document.getElementById("candidate3").style.visibility = 'visible';
+            document.getElementById("nullVote").style.visibility = 'visible';
+            document.getElementById("whiteVote").style.visibility = 'visible';
+            document.getElementById("terminate").style.visibility = 'visible';
+            document.getElementById("reset").style.visibility = 'hidden';
+            output.innerHTML = "Votação reiniciada!"
+        }
+            
     </script>
 </body>
 </html>
