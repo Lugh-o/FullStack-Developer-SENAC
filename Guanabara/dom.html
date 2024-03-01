@@ -3,35 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Eventos DOM</title>
+    <title>Calculadora</title>
     <style>
-        div#area{
+        body{
+            background-color: #9f9ba2;
+            color: #000000
+        }
+
+        div#greeting{
             font: normal 20px Arial;
             background: #b9e2d1;
             width: 200px;
             height: 200px;
             line-height: 200px;
             text-align: center;
+            margin: auto;
+            border: 2px solid #000000
         }
+
+        h1#header{
+            text-align:center;
+        }
+
+        
 
     </style>
 </head>
 <body>
-    <h1> Calculadora</h1>
-    <input type="number" name="value1" id="value1">
+    <h1 id="header">Calculadora</h1>
+    Escreva dois valores numéricos e selecione a operação que deseja realizar:<br/>
+    <input type="number" name="value1" id="value1"> 
     <input type="number" name="value2" id="value2">
-    <input type="button" value = "somar" id="sumButton" onclick="sum()"> 
-    <input type="button" value = "subtrair" id="subButton" onclick="subtraction()"> 
-    <input type="button" value = "multiplicar" id="multButton" onclick="multiplication()"> 
-    <input type="button" value = "dividir" id="divButton" onclick="division()"> 
-    <div id='res'>Resultado:</div>
+    <br/><br/>
+    <input type="button" value = "Somar" id="sumButton" onclick="sum()"> 
+    <input type="button" value = "Subtrair" id="subButton" onclick="subtraction()"> 
+    <input type="button" value = "Multiplicar" id="multButton" onclick="multiplication()"> 
+    <input type="button" value = "Dividir" id="divButton" onclick="division()"> 
+    <br><br/>
+    <div id='res'>Resultado</div>
+    <br><br/><br><br/>
 
-    <div id="area">
+    <div id="greeting">
         Hello
     </div>
 
     <script>
-        let a = window.document.getElementById('area')
+        let a = window.document.getElementById('greeting')
         a.addEventListener('mouseenter', entrar)
         a.addEventListener('mouseleave', sair)
         
@@ -51,45 +68,29 @@
             let value2Object = window.document.getElementById('value2')
             let v1 = Number(value1Object.value)
             let v2 = Number(value2Object.value)   
-            return [v1, v2]
+            return {v1, v2, resultObject}
         }
 
         function sum(){
-            let resultObject = window.document.getElementById('res')
-            let value1Object = window.document.getElementById('value1')
-            let value2Object = window.document.getElementById('value2')
-            let v1 = Number(value1Object.value)
-            let v2 = Number(value2Object.value)            
+            let {v1, v2, resultObject} = getValues()
             let result = v1 + v2
             resultObject.innerHTML = `O resultado de ${v1} + ${v2} = ${result}`
         }
 
         function subtraction(){
-            let resultObject = window.document.getElementById('res')
-            let value1Object = window.document.getElementById('value1')
-            let value2Object = window.document.getElementById('value2')
-            let v1 = Number(value1Object.value)
-            let v2 = Number(value2Object.value)            
+            let {v1, v2, resultObject} = getValues() 
             let result = v1 - v2
             resultObject.innerHTML = `O resultado de ${v1} - ${v2} = ${result}`
         }
 
         function multiplication(){
-            let resultObject = window.document.getElementById('res')
-            let value1Object = window.document.getElementById('value1')
-            let value2Object = window.document.getElementById('value2')
-            let v1 = Number(value1Object.value)
-            let v2 = Number(value2Object.value)            
+            let {v1, v2, resultObject} = getValues()          
             let result = v1 * v2
             resultObject.innerHTML = `O resultado de ${v1} * ${v2} = ${result}`
         }
 
         function division(){
-            let resultObject = window.document.getElementById('res')
-            let value1Object = window.document.getElementById('value1')
-            let value2Object = window.document.getElementById('value2')
-            let v1 = Number(value1Object.value)
-            let v2 = Number(value2Object.value)            
+            let {v1, v2, resultObject} = getValues()        
             let result = v1 / v2
             resultObject.innerHTML = `O resultado de ${v1} / ${v2} = ${result}`
         }
