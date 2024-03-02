@@ -2,7 +2,6 @@ let age = 73
 let sex = "M"
 let canRetire
 
-
 if(sex === "M"){
     canRetire = age >= 65 ? "pode" : "não pode"
 } else { 

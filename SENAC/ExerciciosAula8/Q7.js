@@ -19,7 +19,7 @@ switch(true){
         break   
     default:
         console.log("Valor Inválido")
-        return  
+        return 
 }
 
 console.log(`O nadador é da categoria ${category}`)
