@@ -6,14 +6,12 @@ function multTable(){
         return
     }
 
-    tab.innerHTML = ''
+        tab.innerHTML = ''
     let numValue = Number(numInput)
-    for(i = 0; i <= 10; i++){
+    for(i = 1; i <= 10; i++){
         let item = document.createElement('option')
         item.text = `${numValue} x ${i} = ${numValue*i}`
         item.value = `tab${i}`
         tab.appendChild(item)
-
     }
-
 }

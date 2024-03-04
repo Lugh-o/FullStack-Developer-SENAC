@@ -1,6 +1,5 @@
 // https://www.codewars.com/kata/58b8dccecf49e57a5a00000e/train/javascript
 
-
 function repeatAdjacent(s){
     let j = 0
     let groupsArray = []
