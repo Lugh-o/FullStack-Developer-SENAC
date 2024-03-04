@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contagem</title>
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+    <header>
+        <h1>Contagem</h1>
+    </header>
+    <section>
+        <div>
+            <p>Início:
+                <input type="number" name="txtstart" id="txtstart" min="0">
+            </p>
+            <p>Fim:      
+                <input type="number" name="txtend" id="txtend" min="0">
+            </p>
+            <p>Passo:
+                <input type="number" name="txtstep" id="txtstep" min="0">
+            </p>
+            <p>
+                <input type="button" value="Conferir" onclick = "conferir()">
+            </p>
+        </div>
+        <div id="res">
+            Preparando a contagem...
+        </div>
+    </section>
+
+    <footer>
+        <p>Lugh-o</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
