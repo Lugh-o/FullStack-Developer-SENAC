@@ -1,28 +1,27 @@
 let i = 1
 let selectArray = []
 let res = window.document.getElementById('res')
+let numInput = window.document.getElementById('num')
 
 function toFixedIfNecessary(value, dp){
     return +value.toFixed(dp);
 }
 
 function add(){
-    let numInput = window.document.getElementById('num')
     let list = window.document.getElementById('list')
     let item = window.document.createElement('option')
 
     let num = Number(numInput.value)
     if(num > 100 || num < 1){
         res.innerHTML = `Por favor digite um numero entre 1 e 100`
-        return
+    } else{
+        res.innerHTML = ``
+        selectArray.push(num)
+        item.text = `Valor ${num} adicionado!`
+        item.value = `l${i}`
+        i++
+        list.appendChild(item)
     }
-
-    res.innerHTML = ``
-    selectArray.push(num)
-    item.text = `Valor ${num} adicionado!`
-    item.value = `l${i}`
-    i++
-    list.appendChild(item)
     numInput.value = ``
     numInput.focus()
 }
@@ -43,7 +42,8 @@ function analize(){
     }
     res.innerHTML += `Somando todos os valores, temos ${sum}<br/>`
     res.innerHTML += `A média dos valores digitados é ${toFixedIfNecessary(sum/selectLen, 2)}<br/>`
-
+    numInput.value = ``
+    numInput.focus()
 }
 
 function reset(){
@@ -51,4 +51,6 @@ function reset(){
     selectArray = []
     res.innerHTML = `Programa reiniciado!`
     list.innerHTML = ``
+    numInput.value = ``
+    numInput.focus()
 }
