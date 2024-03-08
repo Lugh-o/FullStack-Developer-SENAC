@@ -1,21 +1,16 @@
 function mySort(array){
-    let sorted = []
-
+    let sorted = [array[0]]
+    
     for(let i = 0; i < array.length; i++){
         let current = array[i]
-
-        if(sorted.length === 0){
-            sorted.push(current)
-
-        } else{
-            for(let j = 0; j <= sorted.length; j++){
-                if(current > sorted[j]){
-                    continue
-                }
-                sorted.splice(j, 0, current)
-                break
+        for(let j = 0; j <= sorted.length; j++){
+            if(current > sorted[j]){
+                continue
             }
+            sorted.splice(j, 0, current)
+            break
         }
+        
     }
     return sorted
 }
@@ -34,5 +29,5 @@ function myBetterSort(array){
 }
 
 let numbers = [11, 0, 2, 9, 8, 7, 3, -3, 4, -8, 10, 12, 65, 1, 5, 6]
-console.log(myBetterSort(numbers))
+console.log(mySort(numbers))
 
