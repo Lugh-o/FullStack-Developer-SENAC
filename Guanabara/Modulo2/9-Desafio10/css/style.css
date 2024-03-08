@@ -1,0 +1,64 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: 'Rakesly Bk';
+    src: url(../fonts/rakeslybk.otf);
+}
+
+@font-face {
+    font-family: 'idroid';
+    src: url(../fonts/idroid.otf);
+}
+
+body {
+    background-color: lightgreen;
+    margin-top: 0;
+    padding-top: 0;
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+header {
+    text-align: center;
+    background-image: linear-gradient(to bottom, lightgreen, rgb(0, 100, 0));
+    color: white;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.4);
+}
+
+header > h1 {
+    font-family: 'Rakesly Bk', Arial, Helvetica, sans-serif;
+    margin-top: 0;
+}
+
+header > p {
+    width: 360px;
+    margin: auto;
+}
+
+header > nav {
+    text-align: left;
+    padding-top: 15px;
+    padding-bottom: 7px;
+}
+
+header > nav > a {
+    text-decoration: none;
+    color: white;
+    padding-right: 10px;
+}
+
+header > nav > a:hover {
+    color: rgb(246, 255, 0);
+}
+
+main {
+    background-color: white;
+    width: 600px;
+    padding-top: 5px;
+    margin: auto;
+
+}
+
+.specialTitle {
+    font-family: 'idroid', Arial, Helvetica, sans-serif;
+}

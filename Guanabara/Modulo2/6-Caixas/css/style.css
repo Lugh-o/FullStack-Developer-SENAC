@@ -1,0 +1,26 @@
+@charset "UTF-8";
+
+h1 { 
+    /* display: inline; */
+    background-color: lightgray;
+    height: 300px;
+    width: 300px;
+         /* width style color */
+    border: 10px solid black;
+          /* top right bottom left */
+    padding: 10px 10px 10px 10px;
+          /* top right bottom left */
+    /* margin: 10px 10px 10px 10px; */
+    margin: auto; /* Centraliza automaticamente */
+         /* width style color */
+    outline: 5px dashed salmon;
+    
+}
+
+a {
+    /* display: block; */
+    border: 5px dashed red;
+    padding: 10px 10px 10px 10px;
+    /* margin: 10px 10px 10px 10px */
+
+}

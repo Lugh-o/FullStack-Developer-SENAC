@@ -1,0 +1,45 @@
+@charset "UTF-8";
+
+/* 
+    em HTML é id => em CSS é #
+    em HTML é class => em CSS é .
+ 
+    Segundo o W3C, você só pode usar cada id único em apenas um elemento. Se você quiser fazer isso, utilize classes!
+
+    Você consegue colocar id e class no mesmo elemento, mas o id sobrepõe.
+*/
+
+body {
+    background-color: #d6fde9;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+    color:#1e402f;
+}
+
+h1#main {
+    text-align: center;
+    background-color: #3c805e;
+    color: white;
+}
+
+h2 {
+    color: #3c805e;
+}
+
+.basic{
+    color:#3c805e;
+}
+
+.intermediate {
+    color: #80793c;
+}
+
+.advanced {
+    color: #803c3c;
+}
+
+.emphasis {
+    background-color: #c5c56070;
+}
