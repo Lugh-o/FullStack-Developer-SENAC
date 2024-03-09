@@ -111,13 +111,12 @@ img.small {
     max-width: 350px;
 }
 
-section > p > a {
+main a {
     color: var(--cor3);
     text-decoration: none;
     font-weight: bolder;
 }
-
-section > p > a::after {
+main a::after {
     content: "\01F517";
 }
 
