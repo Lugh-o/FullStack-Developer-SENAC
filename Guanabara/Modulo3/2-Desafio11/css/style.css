@@ -29,13 +29,13 @@ header > p {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-header a, footer a {
+a {
     color: white;
     text-decoration: none;
     font-weight: bold;
 }
 
-header a:hover, footer a:hover {
+a:hover {
     text-decoration: underline;
 }
 
