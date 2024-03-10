@@ -7,6 +7,11 @@
     padding: 0px;
 }
 
+html, body {
+    min-height: 100vh;
+    background-color: darkgray;
+}
+
 header {
     color: white;
     text-align: center;
@@ -22,41 +27,41 @@ h1 {
 
 header > p {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    display: block;
 }
 
-header a {
+header a, footer a {
     color: white;
     text-decoration: none;
     font-weight: bold;
 }
 
+header a:hover, footer a:hover {
+    text-decoration: underline;
+}
+
+section {
+    padding: 10vh 0vh;
+}
+
 main p {
     font-size: 3.5vw;
-    line-height: 2em;
-    margin-block-start: 1em;
-    margin-block-end: 1em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
     font-family: 'Sriracha', cursive;
-
-    display: block;
-    width: 50%;
+    line-height: 2em;
     margin: 20px;
-    padding-left: 10px;
-    padding-bottom: 10px;
+    padding-left: 30px;
+    padding-bottom: 2em;
 }
 
 .white{
-    padding:50px 0px 105px 0px;
+    background-color: white;
 }
 
 .bg {
     background-size: cover;
     background-attachment: fixed;
-    background-position: center center;
+    background-position: right center;
     color: white;
-    padding: 60px 0px 60px 0px;
+    box-shadow: inset 6px 6px 13px 0px rgba(0, 0, 0, 0.4);
 }
 
 .bg#flower {
@@ -70,6 +75,9 @@ main p {
 .bg p {
     display: block;
     background-color: rgba(0, 0, 0, 0.2);
+    display: inline-block;
+    padding-right: 10px;
+    text-shadow: 1px 1px 0px black;
 }
 
 footer {
@@ -77,5 +85,6 @@ footer {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: white;
     background-color: black;
-    padding: 5px 0px;
+    padding: 7px 0px;
+    font-size: 2vw;
 }
