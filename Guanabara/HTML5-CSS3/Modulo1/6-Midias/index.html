@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Midias em HTML5</title>
+</head>
+<body>
+    <h1>Imagens Dinâmicas</h1>
+    <p>Tente abrir esse site em vários dispositivos diferentes ou simplesmente aumente ou diminua o tamanho do seu navegador
+    </p>
+
+    <picture>
+        <!-- PRESTA ATENÇÃO NA ORDEM -->
+        <source media="(max-width: 750px)" srcset="assets/paisagem-p.png" type="image/png">
+        <source media="(max-width: 1050px)" srcset="assets/paisagem-m.png" type="image/png">
+        <img src="assets/paisagem-g.png" alt="Imagem Flexível">
+    </picture>
+
+    <h1>Reproduzindo Áudio</h1>
+    <p>Vamos aprender a reproduzir áudios em HTML5</p>
+    <!-- <audio src="media/happy-mistake.mp3" controls></audio> -->
+    <!-- autoplay loop -->
+    <!-- tentar evitar arquivos wav pq sao mto pesados -->
+    <audio preload="metadata" controls> 
+        <source src="audio/guanacast-33.mp3" type="audio/mpeg">
+        <source src="audio/guanacast-33.ogg" type="audio/ogg">
+        <source src="audio/guanacast-33.wav" type="audio/wav">
+        <p>Infelizmente seu navegador nao consegue reproduzir audio <a href="audio/guanacast-33.mp3">Clique aqui para baixar o arquivo MP3</a></p>
+    </audio>
+
+    <h1>Reproduzindo Vídeos</h1>
+    <h2>Videos hospedados localmente</h2>
+    <!-- <video src="video/meu-video.ogv" width="500" controls></video> -->
+    <video preload="metadata" width="560" poster="assets/limoes-capa.png" controls>
+        <source src="video/meu-video.mp4" type="video/mp4">
+        <source src="video/meu-video.m4v" type="video/mp4">
+        <source src="video/meu-video.webm" type="video/webm">
+        <source src="video/meu-video.ogg" type="video/ogg">
+        <p>Seu navegador não tem compatibilidade com reprodução de vídeos</p>
+    </video>
+
+    <h2>Videos de hospedagem externa</h2>
+    <h3>Youtube</h3>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/3hng-hmSv2Y?si=APWacMf-3L8RYNFi" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    <h3>Vimeo</h3>
+    <iframe src="https://player.vimeo.com/video/338441565?h=5e0ac135c5" width="640" height="346" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+
+</body>
+</html>
