@@ -1,0 +1,36 @@
+@charset "UTF-8";
+
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    background: black url(../assets/fundo-madeira.jpg) center center no-repeat fixed;
+    background-size: cover;
+}
+
+nav {
+    position: absolute;
+    height: 2vh;
+    right: 0;
+    margin-right: -100px;
+    transform: scale(20%);
+}
+
+nav img {
+    display: block;
+    border-radius: 50%;
+}
+
+div {
+    height: 90vh;
+    background: transparent url(../assets/frame-iphone.png) center center no-repeat fixed;
+    
+}
+
+iframe {
+    height: 90vh;
+    width: 90vw;
+}
