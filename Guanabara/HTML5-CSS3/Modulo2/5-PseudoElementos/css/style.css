@@ -1,0 +1,52 @@
+@charset "UTF-8";
+/* 
+    Pseudo-Classes se referem ao estado dos elementos HTMLs
+
+    Seletores Personalizados
+    #   =  id
+    .   =  class
+    :   =  pseudo-class
+    ::  =  pseudo-element
+    >   =  children
+
+*/
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+a {
+    color:red;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:visited {
+    color: darkred;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: black;
+}
+
+a:active {
+    color: yellow;
+}
+
+.special {
+    background-color: rgb(248, 163, 163);
+}
+
+.special::before {
+    content: ' [link]';
+    text-decoration: none;
+    font-weight: normal;
+    color: white;
+}
+
+.special::after {
+    content: ' [link]';
+    text-decoration: none;
+    font-weight: normal;
+    color: white;
+}

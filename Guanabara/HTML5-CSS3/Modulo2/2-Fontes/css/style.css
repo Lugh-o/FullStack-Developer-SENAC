@@ -1,0 +1,62 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+@font-face {
+    font-family: 'Story Night';
+    src: url(../fonts/StoryNight.ttf) format(truetype);
+    /* Tipos de format()
+        - opentype (otf)
+        - truetype (ttf)
+        - embedded-opentype
+        - truetype-aat(Apple Advanced Typography)
+        - svg
+    */
+}
+
+body{
+    font-family: 'Work Sans', 'Kaushan Script', Arial, Helvetica, sans-serif;
+    font-size: 1em;
+    color: black;
+}
+
+h1 {
+    font-family: 'Work Sans', 'Kaushan Script', Arial, Helvetica, sans-serif;
+    font-size: 3em;
+}
+
+h2 {
+    font-family: 'Work Sans', 'Kaushan Script', Arial, Helvetica, sans-serif;
+    font-size: 2em;
+}
+ 
+h2#external{
+    font-family: 'Story Night';
+    margin-bottom: 0px;
+}
+
+ul#external{
+    font-family: 'Story Night';
+    font-size: 1.5em;
+    font-weight: normal;
+    margin-top: 0px;
+}
+
+div#align{
+    font: normal 16px Arial, Verdana, serif;    
+    text-align: left;
+    text-indent: 30px;
+
+}
+
+h2#align {
+    text-align: center;
+}
+
+h3#align {
+    text-align: right;
+}
+
+p#align {
+    text-align: justify;
+}

@@ -1,0 +1,26 @@
+@charset "UTF-8";
+
+body {
+    height: 100vh;
+    /* shorthand background
+        color image position repeat size* attachment
+        size -> nao funciona
+    */
+    background: black url(../assets/wallpaper002.jpg) center center no-repeat fixed;
+    background-size: cover;
+    /* background-color: black;
+    background-image: url(../assets/wallpaper002.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    
+    background-attachment: fixed; */
+}
+
+main {
+    background-color: white;
+    max-width: 500px;
+    padding: 10px;
+    margin: auto;
+    border: 1px solid blue;
+    border-radius: 15px;
+}
