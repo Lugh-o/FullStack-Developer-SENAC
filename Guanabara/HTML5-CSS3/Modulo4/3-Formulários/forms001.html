@@ -8,7 +8,13 @@
 </head>
 <body>
     <h1>Meu primeiro Formulário</h1>
-    <form action="cadastro.php" autocomplete="off">
+    <!-- 
+        GET limita 3000 bytes e n pode enviar arquivos
+        POST esconde o dado da URL, mas nao fica protegido
+        Em questão de velocidade, GET é mais rapido, mas não
+        é relevante hoje em dia
+    -->
+    <form action="cadastro.php" method="post" autocomplete="off">
         <p><label for="inome">Nome:</label>
             <input type="text" name="nome" id="inome"></p>
         <p><label for="isobrenome">Sobrenome:</label>
