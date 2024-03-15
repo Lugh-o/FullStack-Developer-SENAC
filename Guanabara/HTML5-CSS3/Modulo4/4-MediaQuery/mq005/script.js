@@ -6,3 +6,12 @@ function mobileMenu() {
       x.style.display = "block";
     }
   }
+
+  function resized() {
+    let x = document.getElementById("imenu");
+    if(window.innerWidth >= 768){
+      x.style.display = 'block'
+    } else {
+      x.style.display = 'none'
+    }
+  }

@@ -1,0 +1,22 @@
+@charset "UTF-8";
+
+@media screen and (min-width:768px) { /*Tablets pra cima*/
+    a#burguer {
+        display: none;
+    }
+
+    ul#imenu {
+        display: block;
+        text-align: left;
+        margin-left: 7px;
+    }
+
+    li {
+        display: inline-block;
+    }
+
+    main {
+        width: 768px;
+    }
+
+}

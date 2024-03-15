@@ -19,14 +19,12 @@ header h1 {
     padding: 10px;
 }
 
-menu {
-    overflow: hidden;
-    background-color: rgb(78, 78, 78);
-    position: relative;
-}
-
 ul#imenu {
     display: none;
+}
+
+menu li {
+    background-color: rgb(78, 78, 78);
 }
 
 menu a {
@@ -53,11 +51,10 @@ a#burguer:hover {
 
 main {
     margin: auto;
-    width: 60%;
+    width: 80%;
     height: 100%;
     background-color: white;
     padding: 20px;
-    margin-top: 10px;
     border-radius: 20px;
 }
 
