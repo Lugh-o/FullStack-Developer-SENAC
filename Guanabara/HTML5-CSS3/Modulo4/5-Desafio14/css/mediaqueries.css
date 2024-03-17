@@ -1,13 +1,92 @@
 @charset "UTF-8";
 
 @media screen and (min-width: 768px) and (max-width: 992px){
-
-}
-
-@media screen and (min-width: 992px) and (max-width: 1200px) {
-   
-}
-
-@media screen and (min-width: 1200px) {
+    body {
+        background-image: linear-gradient(to bottom, var(--color1), var(--color3));
+    }
     
+    main {
+        height: 280px;
+        width: 700px;
+    }
+
+    main h1 {
+        font-weight: bold;
+        padding: 10px;
+    }
+
+    main p {
+        text-align: left;
+        padding: 0px 0px 10px 10px;
+    }
+
+    img {
+        width: 30%;
+        height: 100%;
+        float: left;
+        padding-right: 10px;
+        border-radius: 10px 0px 0px 10px;
+    }
+
+    .fields {
+        margin-right: 1%;
+        margin-left: 31%;
+    }
+
+    .fields input {
+        width: 88%;
+        margin-left: 9%;
+    }
+
+    .button {
+        width: 68.5%;
+    }
+}
+
+@media screen and (min-width: 992px){
+    body {
+        background-image: linear-gradient(to bottom, var(--color1), var(--color3));
+    }
+
+    main {
+        height: 350px;
+        width: 850px;
+        
+    }
+
+    main h1 {
+        font-size: 2em;
+        font-weight: bold;
+        padding: 20px;
+    }
+
+    main p {
+        font-size: 0.9em;
+        padding: 0px 5px 10px 5px;
+        text-align: left;
+    }
+
+    img {
+        width: 45%;
+        height: 100%;
+        float: right;
+        border-radius: 0px 10px 10px 0px;
+    }
+
+    .fields {
+        margin-left: 1%;
+        margin-right: 46%;
+    }
+
+    .fields input {
+        width: 89%;
+        margin-left: 9%;
+        margin-top: 3px;
+    }
+
+    .button {
+        width: 54%;
+        height: 40px;
+        margin-bottom: 10px;
+    }
 }

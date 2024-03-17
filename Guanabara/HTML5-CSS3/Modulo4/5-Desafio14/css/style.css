@@ -36,7 +36,6 @@ img {
     height: 180px;
     border-radius: 10px 10px 0px 0px;
     object-fit: cover;
-
 }
 
 main h1 {
@@ -53,19 +52,20 @@ main p {
 .fields {
     background-color: var(--color1);
     color: white;
-    padding-bottom: 2px;
+    padding-bottom: 3px;
     border-radius: 10px;
-    margin-right: 9%;
-    margin-left: 9%;
+    margin-right: 6%;
+    margin-left: 6%;
     margin-bottom: 10px;
 }
 
 .fields input {
     background-color: var(--color2);
     line-height: 2.5em;
-    margin-left: 17%;
+    margin-left: 18%;
     border-radius: 10px;
     border-style: solid;
+    padding-left: 10px;
 }
 
 .fields span {
@@ -95,7 +95,6 @@ input#forgot {
 
 input#submit:hover {
     background-color: var(--color3);
-
 }
 
 input#forgot:hover {
