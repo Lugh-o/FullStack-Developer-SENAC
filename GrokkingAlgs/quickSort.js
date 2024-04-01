@@ -1,37 +1,31 @@
-array = [8, 3, 5, 10, 7, 20];
+array = [7, 4, 3, 4, 5, 6, 7, 8, 0];
 
 function quicksort(array){
-    console.log("----------");
-    console.log(array);
-
     if(array.length < 2) {
-        return array
+        return array;
     } 
+        
+    let pivot = array[Math.floor((array.length - 1)/2)];
+    let less = [];
+    let greater = [];
+    let equal = [];
 
-    pivotIndex = Math.round((array.length - 1)/2);
-    pivot = array[pivotIndex];
-    tempArray = array.slice(0, pivotIndex).concat(array.slice(pivotIndex+1));
-    
-    less = [];
-    for(let i = 0; i < tempArray.length; i++){
-        if(tempArray[i] <= pivot){
-            less.push(tempArray[i]);
+    for(let i = 0; i < array.length; i++){
+        let current = array[i];
+        if(current < pivot){
+            less.push(current);
+        } else if (current > pivot) {
+            greater.push(current);
+        } else {
+            equal.push(current)
         }
     }
 
-    greater = []
-    for(let i = 0; i < tempArray.length; i++){
-        if(tempArray[i] > pivot){
-            greater.push(tempArray[i]);
-        }
-    }
-
-    console.log(tempArray);
-    console.log(less);
-    console.log(pivot);
-    console.log(greater);
-    
-    // return [].concat(quicksort(less), pivot, quicksort(greater))
+    return [
+        ...quicksort(less),
+        ...equal,
+        ...quicksort(greater)
+    ];
 }
 
 console.log(quicksort(array));
