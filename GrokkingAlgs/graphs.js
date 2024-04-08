@@ -37,5 +37,3 @@ graph.addConnection("B", "E");
 graph.addConnection("B", "D");
 graph.addConnection("C", "D");
 console.log(graph);
-
-aaaaa
