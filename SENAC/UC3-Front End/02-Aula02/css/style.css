@@ -1,0 +1,54 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+h4 {
+    color: blue;
+    margin: 20px;
+    margin-top: 20px;
+}
+
+h4#first {
+    margin-top: 200px;
+}
+
+p {
+    text-align: justify;
+    text-indent: 30px;
+    color: blue;
+    margin: 0px 20px;
+    padding: 0px 5px;
+    border: solid lightgreen 1.5px;
+}
+
+p#p1 {
+    color:red;
+    background-color: yellow;
+}
+
+p#p3 {
+    color: black;
+    font-size: 1.2em;
+}
+
+form {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+    background: lightblue;
+    margin: 20px;
+    padding-bottom: 100px;
+}
+
+input#isubmit{
+    margin-left: 50%;
+    transform: translateX(-50%);
+    
+}
+
+input#ipass {
+    background-color: white;
+    margin: 20px;
+}

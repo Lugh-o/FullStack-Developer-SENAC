@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <form action="#" method="post">
+        <input type="password" name="pass" id="ipass" required>
+        <input type="submit" value="Enviar" id="isubmit">
+    </form>
+    <div id="lower"></div>
+    <div id="upper"></div>
+    <div id="number"></div>
+    <div id="special"></div>
+    <div id="length"></div>
+    <h4 id="first">titulo 01</h4>
+    <p id="p1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium magni repellat laboriosam id ducimus ex deserunt omnis dolorem suscipit rem dignissimos aliquam nobis doloribus error, tempore natus possimus nemo perspiciatis.</p>
+    <h4>titulo 02</h4>
+    <p id="p2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore vel eveniet voluptatem nostrum laborum laboriosam voluptatum necessitatibus amet at possimus mollitia esse, repellat dolore nihil. Repellendus distinctio quidem eveniet suscipit!</p>
+    <h4>titulo 03</h4>
+    <p id="p3">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nisi consequuntur delectus dolorem est. Repellat facilis excepturi ut, saepe, doloremque ipsum animi et natus maiores dicta est iste temporibus ad cum?</p>
+    <h4>titulo 04</h4>
+    <p id="p4">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quo vitae culpa odit excepturi, ea veritatis temporibus omnis amet dolorum at ut rerum! Nemo facilis nostrum quae ab commodi consequuntur saepe.</p>
+
+    <script>
+        const passInput = document.getElementById('ipass');
+        passInput.addEventListener('input', checkPassword);
+        let validityArray = [0, 0, 0, 0, 0];
+
+        function checkPassword(){
+            let password = passInput.value;
+            const regex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@.#$!%*?&])[A-Za-z\d@.#$!%*?&]{8,255}$/; 
+            const lowerRegex = /^(?=.*[a-z])/;
+            const upperRegex = /^(?=.*[A-Z])/;
+            const specialRegex = /^(?=.*[@.#$!%*?&])/;
+            const numberRegex = /^(?=.*[0-9])/;
+            const lengthRegex = /^.{8,255}$/;
+
+            const divLower = document.getElementById('lower');
+            const divUpper = document.getElementById('upper');
+            const divSpecial = document.getElementById('special');
+            const divNumber = document.getElementById('number');
+            const divLength = document.getElementById('length');
+
+            if(lowerRegex.test(password)){
+                validityArray[0] = true;
+
+            } else {
+                validityArray[0] = false;
+            }
+            if(upperRegex.test(password)){
+                validityArray[1] = true;
+            } else {
+                validityArray[1] = false;
+            }
+            if(specialRegex.test(password)){
+                validityArray[2] = true;
+            } else {
+                validityArray[2] = false;
+            }
+            if(numberRegex.test(password)){
+                validityArray[3] = true;
+            } else {
+                validityArray[3] = false;
+            }
+            if(lengthRegex.test(password)){
+                validityArray[4] = true;
+            } else {
+                validityArray[4] = false;
+            }
+
+            const checker = arr => arr.every(Boolean);
+
+            if(password.length === 0){
+                passInput.style.backgroundColor = "white"
+            }else if(checker(validityArray)){
+                passInput.setCustomValidity("");
+                passInput.style.backgroundColor = "green"
+            } else {
+                passInput.setCustomValidity("Invalid Field");
+                passInput.style.backgroundColor = "red"
+            }
+        }
+    </script>
+</body>
+</html>
