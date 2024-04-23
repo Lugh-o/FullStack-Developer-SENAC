@@ -1,0 +1,159 @@
+@charset "UTF-8";
+
+@import url(https://db.onlinewebfonts.com/c/e8fafd4bab1ff229bb62067775369b8d?family=Thunderhouse+Pro);
+:root {
+    --cor1: #19004F;
+    --cor2: #F2A007;
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Thunderhouse Pro';
+}
+
+header {
+    z-index: 5;
+}
+
+header img {
+    width: 179px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+nav {
+    background-color: var(--cor1);
+    font-size: 18px;
+    display: flex;
+    flex-direction: row;
+
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 30px;
+    padding: 20px 0px;
+    padding-bottom: 30px;
+}
+
+nav div {
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 50px;
+}
+
+section h1{
+    position: absolute;
+    font-size: 111px;
+    font-weight: 400;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+section#carrossel img {
+    width: 100%;
+    height: 815px;
+}
+
+section#carrossel button {
+    z-index: 2;
+    width: 67px;
+    height: 67px;
+    border-radius: 50%;
+    background-color: var(--cor2);
+    border: none;
+}
+
+section#carrossel button a {
+    color: white;
+    text-decoration: none;
+    font-size: 25px;
+}
+
+section#carrossel div {
+    display: flex;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: -90px;
+    gap: 40px;
+}
+
+section#agenda {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    justify-items: center;
+    margin: 40px;
+}
+
+section#agenda div {
+    width: 233px;
+    height: 204px;
+    background-color: red;
+    margin-top: 330px;
+    margin-bottom: 200px;
+}
+
+section#agenda h1 {
+    margin: 111px 0px;
+}
+
+section#agenda nav{
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    justify-items: center;
+    margin: 40px;
+    background-color: white;
+    margin-top: 550px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+section#agenda nav a {
+    color: black;
+    font-size: 64px;
+}
+
+section#generos {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    justify-items: center;
+    margin-bottom: 70px;
+}
+
+section#generos div {
+    width: 396px;
+    background-color: green;
+    border-radius: 20px;
+    margin-top: 180px;
+}
+
+section#generos div#third {
+    height: 921px;
+    background-color: rgba(0, 128, 0, .7);
+    margin-top: 294px;
+}
+
+section#generos div#second {
+    height: 1024px;
+    background-color: rgba(0, 128, 0, .8);
+    margin-top: 243px;
+}
+
+section#generos div#first {
+    height: 1151px;
+}
+
+section#salvador img{
+    width: 100%;
+    height: 1476px;
+}
