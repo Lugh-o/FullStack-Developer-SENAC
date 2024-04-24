@@ -1,0 +1,65 @@
+@charset "UTF-8";
+
+.item {
+    margin: 5px;
+    background-color: red;
+    text-align: center;
+    font-size: 1.5em;
+}
+
+.it2 {
+    background-color: green;
+}
+
+.it3 {
+    background-color: yellow;
+}
+
+.it4 {
+    background-color: aqua;
+}
+
+.grid {
+    display: grid;
+}
+
+.template-columns{
+    grid-template-columns: repeat(2, 200px) 100px;
+}
+
+.template-rows {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 100px 100px;
+}
+
+.template-areas-1 {
+    grid-template-areas: 
+    "logo nav nav"
+    "sidenav content advert"
+    "sidenav footer footer"
+    ;
+}
+
+.logo {
+    grid-area: logo;
+}
+
+.nav {
+    grid-area: nav;
+}
+
+.content {
+    grid-area: content;
+}
+
+.sidenav {
+    grid-area: sidenav;
+}
+
+.advert {
+    grid-area: advert;
+}
+
+.footer {
+    grid-area: footer;
+}
