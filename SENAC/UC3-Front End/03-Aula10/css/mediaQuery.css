@@ -1,0 +1,17 @@
+@charset "UTF-8";
+
+@media screen and (max-width: 768px) {
+    .grid {
+        height: 100vh;
+        display: grid;
+        grid-template: 
+        "header" 20vh
+        "aside" 10vh
+        "content-main" .5fr
+        "content-main" .5fr
+        "nav" 10vh 
+        "footer" 10vh
+        / 1fr;
+    }
+    
+}

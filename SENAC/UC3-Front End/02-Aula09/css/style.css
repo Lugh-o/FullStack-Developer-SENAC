@@ -40,6 +40,14 @@
     ;
 }
 
+.template-areas-2 {
+    grid-template: 
+    "logo nav nav" 50px
+    "sidenav content advert" 150px
+    "sidenav footer footer" 100px 
+    / 100px 2fr 50px;
+}
+
 .logo {
     grid-area: logo;
 }
