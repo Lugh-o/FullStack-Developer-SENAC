@@ -28,3 +28,9 @@ form #icheck {
     margin-top: 20px;
     margin-bottom: -20px;
 }
+
+#ifooter {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}

@@ -1,0 +1,30 @@
+@charset "UTF-8";
+
+:root{
+    --color1: #FFA400;
+    --color2: #FAE991;
+    --color3: #FFFD00; 
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+.navbar img {
+    width: 90px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.navbar-custom {
+    background-color: var(--color1);
+    height: 107px;
+}
+
+#ifooter {
+    background-color: var(--color1);
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
