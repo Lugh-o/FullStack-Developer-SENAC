@@ -6,9 +6,10 @@
 
 body {
     background-color: #add8e6;
+    align-content: center;
 }
 
-form {
+section {
     width: 450px;
     background-color: #ffffff;
     padding: 50px;
@@ -19,7 +20,11 @@ form a {
     text-decoration: none;
 }
 
+form #icheck {
+    cursor: pointer;
+}
+
 #isubmitDiv {
-    margin-top: 35px;
+    margin-top: 20px;
     margin-bottom: -20px;
 }

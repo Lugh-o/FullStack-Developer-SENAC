@@ -4,9 +4,10 @@ function alertValue() {
     alert(email.value)
 }
 
-let nav = document.getElementsByClassName('navbar')[0];
-let darkModeBtn = document.getElementsByClassName('btn');
-let form = document.getElementById('iform');
+let nav = document.querySelector('.navbar');
+let darkModeBtn = document.querySelectorAll('.btn');
+let sections = document.querySelectorAll('section');
+let footer = document.querySelector('#ifooter');
 function switchMode() {
     if(nav.classList.contains('navbar-light')){
         nav.classList.remove('navbar-light', 'bg-light');
@@ -15,9 +16,16 @@ function switchMode() {
         for(let i = 0; i < darkModeBtn.length; i++){
             darkModeBtn[i].classList.replace('btn-dark', 'btn-light');
         }
-        form.style.backgroundColor = '#3e3e3e';
-        form.style.color = '#ffffff';
-        document.body.style.backgroundColor = 'lightgray';
+
+        for(let i = 0; i < sections.length; i++){
+            sections[i].style.backgroundColor = '#3e3e3e';
+            sections[i].style.color = '#ffffff';
+        }
+
+        document.body.style.backgroundColor = '#767676';
+
+        footer.style.backgroundColor = 'black';
+        footer.classList.replace('text-black', 'text-white');
         return 0; 
     }
     nav.classList.remove('navbar-dark', 'bg-dark');
@@ -26,7 +34,14 @@ function switchMode() {
     for(let i = 0; i < darkModeBtn.length; i++){
         darkModeBtn[i].classList.replace('btn-light', 'btn-dark');
     }
-    form.style.backgroundColor = '#ffffff'
-    form.style.color = '#000000';
+
+    for(let i = 0; i < sections.length; i++){
+        sections[i].style.backgroundColor = '#ffffff';
+        sections[i].style.color = '#3e3e3e';
+    }
+    
     document.body.style.backgroundColor = '#add8e6';
+
+    footer.style.backgroundColor = 'white';
+    footer.classList.replace('text-white', 'text-black');
 }
