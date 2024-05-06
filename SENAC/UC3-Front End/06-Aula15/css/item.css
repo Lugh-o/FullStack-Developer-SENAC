@@ -1,0 +1,97 @@
+@import "imports.css";
+
+:root{
+    --color1: #ff8800;
+    --color2: #FAE991;
+    --color3: #fcae55; 
+    --color4: #D9D9D9;
+}
+
+img {
+    width: 32vw;
+    border-radius: 1vw 0px 0px 1vw;
+}
+
+.btn-custom {
+    background-color: var(--color1);
+    border: none;
+}
+
+.btn-custom:hover {
+    background-color: var(--color3);
+}
+
+section {
+    border: 1px solid black;
+    width: 70vw;
+    height: 32vw;
+    border-radius: 1vw;
+}
+
+#inum {
+    height: 2.5vw;
+    font-size: 1.6vw;
+    margin: 0px 1vw;
+    line-height: 2.5vw;
+}
+
+.numbtn {
+    padding: 0px;
+    width: 2.5vw;
+    height: 2.5vw;
+    font-size: 1.2vw;
+    line-height: 2.5vw;
+    border-radius: .5vw;
+}
+
+h4 {
+    width: 100%;
+    text-align: center;
+    margin: 1vw 0px;
+}
+
+#ipricerow {
+    font-size: 2.5vw;
+    line-height: 2.5vw;
+}
+
+#ipricerow p {
+    font-size: 1.6vw;
+}
+
+#iplus {
+    margin-right: 1vw;
+}
+
+.buybtn, .buybtn > span {
+    font-size: 1.1vw !important;
+}
+
+.buybtn {
+    width: 20vw;
+    margin: 2vw 0px 0px 0px !important;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+#ipask {
+    margin-top: 4vw !important;
+}
+
+.btn-contact {
+    width: 20vw;
+    font-size: 1.1vw;
+    margin-top: 2vw;
+}
+
+section div > p {
+    font-size: 1vw;
+    margin: 0px !important;
+}
+
+h4 {
+    font-size: 1.5vw;
+}

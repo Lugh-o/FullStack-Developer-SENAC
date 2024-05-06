@@ -1,30 +1,151 @@
-@charset "UTF-8";
+@import "imports.css";
 
 :root{
-    --color1: #FFA400;
+    --color1: #ff8800;
     --color2: #FAE991;
-    --color3: #FFFD00; 
+    --color3: #fcae55; 
+    --color4: #D9D9D9;
 }
 
-* {
-    margin: 0px;
-    padding: 0px;
+body {
+    background-color: black;
 }
 
-.navbar img {
-    width: 90px;
-    border-radius: 50%;
+#icarousel {
+    height: 37vw !important;
+}
+
+.carousel-item img {
+    background-color: #2c2c2c;
+    object-fit: contain;
+    height: 37vw;
+}
+
+section {
+    margin-top: 7.5vw;
+}
+
+#grid {
+    display: grid;
+    grid-template: 
+    "collectibles upload" 21vw
+    "decoration upload" 21vw
+    / 47vw 43vw;
+    margin-top: 5.1vw;
+    gap: 2.5vw;
+}
+
+#icollectibles {
+    grid-area: collectibles;
+}
+
+#idecoration {
+    grid-area: decoration;
+}
+
+#iupload {
+    grid-area: upload;
+}
+
+article {
+    background-color: var(--color1);
+    border-radius: 2vw;
+    display: inline-block;
+    box-shadow: 5px 5px 50px var(--color1);
+}
+
+#icollectibles h2, #idecoration h2{
+    float: left;
+    line-height: 21vw;
+    font-size: 2vw;
+    margin-left: 20px;
+    margin-top: 0px;
+}
+
+#icollectibles img, #idecoration img {
+    height: 100%;
+    width: 35%;
     object-fit: cover;
+    border-radius: 0px 2vw 2vw 0px;
+    float: right;
+    mask-image: linear-gradient(to left, rgba(0,0,0,1), rgba(0,0,0,0));
 }
 
-.navbar-custom {
-    background-color: var(--color1);
-    height: 107px;
+#iupload h2 {
+    font-size: 2.5vw;
+    margin-top: 3vw;
 }
 
-#ifooter {
+#iupload img{
+    margin-top: 1vw;
+    width: 30vw;
+    border-radius: 50%;
+    mask-image: radial-gradient(rgba(0,0,0,1) 50%, rgba(0,0,0,0) 70%);
+}
+
+#iupload h3 {
+    margin: 2vw 0px 1vw 0px;
+    font-size: 3vw;
+}
+
+#ifilamentGrid{
+    gap: 5vw;
+    margin-top: 5vw;
+}
+
+#ifilament article {
+    background-color: var(--color4);
+    width: 25vw;
+    height: 29vw;
+    border-radius: 4vw;
+}
+
+#ifilament article h2 {
+    font-size: 5vw;
+    color: black;
+    margin-top: 4vw;
+    margin-bottom: 5vw;
+}
+
+#ifilament ul {
+    margin-left: 10%;
+}
+
+#ifilament li {
+    font-size: 1.3vw;
+}
+
+#icontact {
     background-color: var(--color1);
-    position: relative;
-    bottom: 0;
-    width: 100%;
+    width: 40vw;
+    height: 23vw;
+    border-radius: 2vw;
+    box-shadow: 5px 5px 50px var(--color1);
+}
+
+#icontact h2 {
+    margin: 3vw 0px;
+}
+
+#icontact li {
+    font-size: 1.5vw;
+}
+
+#ius {
+    background-color: var(--color4);
+    width: 74vw;
+    height: 34vw;
+    border-radius: 2vw;
+    box-shadow: 5px 5px 50px var(--color1);
+}
+
+#ius h2{
+    margin: 2vw 0px 5vw 0px;
+}
+
+#ius p {
+    text-align: justify;
+    width: 90%;
+    font-size: 2vw;
+    text-indent: 4vw;
 }
