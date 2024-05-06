@@ -30,7 +30,7 @@ section {
     grid-template: 
     "collectibles upload" 21vw
     "decoration upload" 21vw
-    / 47vw 43vw;
+    / 40vw 40vw;
     margin-top: 5.1vw;
     gap: 2.5vw;
 }
@@ -57,7 +57,7 @@ article {
 #icollectibles h2, #idecoration h2{
     float: left;
     line-height: 21vw;
-    font-size: 2vw;
+    font-size: 1.6vw;
     margin-left: 20px;
     margin-top: 0px;
 }
