@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\imcController;
+use App\Http\Controllers\notaController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -8,3 +9,5 @@ Route::get('/', function () {
 });
 
 Route::get('/imc', [imcController::class, 'index']);
+ 
+Route::get('/nota', [notaController::class, 'index']);
