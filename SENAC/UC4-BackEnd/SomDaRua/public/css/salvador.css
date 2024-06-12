@@ -1,5 +1,6 @@
 @import url(https://db.onlinewebfonts.com/c/e34e16fdcaf1b7ba681aed2f33af988c?family=Thunderhouse+W15+Medium);
 @import url(https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Krona+One&display=swap);
 .titulo {
   font-family: "Thunderhouse W15 Medium";
   font-size: clamp(20px, 10vw, 100px);
@@ -9,15 +10,21 @@
 }
 
 .texto {
-  font-family: "Nunito", sans-serif;
+  font-family: "Krona One", sans-serif;
   color: white;
-  margin: 80px;
+  margin: 60px;
   text-align: justify;
   font-size: clamp(12px, 2vw, 20px);
 }
 
+@media screen and (max-width: 768px) {
+  .texto {
+    margin: 30px;
+  }
+}
 .sobressa {
   display: grid;
+  margin-top: 20px;
   grid-template: "pelourinho" 900px "rio-vermelho" 900px "barra" 900px "gamboa" 900px/1fr;
 }
 
@@ -33,6 +40,12 @@
   grid-area: pelourinho;
 }
 
+@media screen and (max-width: 768px) {
+  .pelourinho {
+    display: flex;
+    flex-direction: column;
+  }
+}
 .txt-pelourinho {
   height: 900px;
   width: 100%;
@@ -44,7 +57,7 @@
 .img-pelourinho {
   height: 900px;
   width: 100%;
-  background-image: url(/images/pelourinho.png?7a74cade4606917985e2b563ec414742);
+  background-image: url(/images/pelourinho.png?e0ae24d88e929f9593247501dad8e1c6);
   background-size: cover;
 }
 
@@ -60,6 +73,12 @@
   grid-area: rio-vermelho;
 }
 
+@media screen and (max-width: 768px) {
+  .rio-vermelho {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+}
 .txt-rio-vermelho {
   height: 900px;
   width: 100%;
@@ -71,7 +90,7 @@
 .img-rio-vermelho {
   height: 900px;
   width: 100%;
-  background-image: url(/images/rioVermelho.png?65a18f7473bee41e6898b919c2f62951);
+  background-image: url(/images/rioVermelho.png?f577bd95aef2fa98042f4fd903627360);
   background-size: cover;
 }
 
@@ -87,6 +106,12 @@
   grid-area: barra;
 }
 
+@media screen and (max-width: 768px) {
+  .barra {
+    display: flex;
+    flex-direction: column;
+  }
+}
 .txt-barra {
   height: 900px;
   width: 100%;
@@ -98,7 +123,7 @@
 .img-barra {
   height: 900px;
   width: 100%;
-  background-image: url(/images/barra.png?d773bc4372639706e0e2869013d99112);
+  background-image: url(/images/faroldabarra.jpg?3595f9650cc317179adc08246988946c);
   background-size: cover;
 }
 
@@ -114,6 +139,12 @@
   grid-area: gamboa;
 }
 
+@media screen and (max-width: 768px) {
+  .gamboa {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+}
 .txt-gamboa {
   height: 900px;
   width: 100%;

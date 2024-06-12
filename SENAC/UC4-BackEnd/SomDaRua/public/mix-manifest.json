@@ -1,6 +1,6 @@
 {
-    "/css/index.css": "/css/index.css",
     "/css/salvador.css": "/css/salvador.css",
+    "/css/index.css": "/css/index.css",
     "/css/header.css": "/css/header.css",
     "/css/footer.css": "/css/footer.css",
     "/css/swiper-bundle.min.css": "/css/swiper-bundle.min.css",
@@ -24,6 +24,7 @@
     "/assets/img/index/saibaMais/fitabonfim.jpg": "/assets/img/index/saibaMais/fitabonfim.jpg",
     "/assets/img/index/saibaMais/pelourinho.jpg": "/assets/img/index/saibaMais/pelourinho.jpg",
     "/assets/img/saibaMais/barra.png": "/assets/img/saibaMais/barra.png",
+    "/assets/img/saibaMais/faroldabarra.jpg": "/assets/img/saibaMais/faroldabarra.jpg",
     "/assets/img/saibaMais/gamboa.png": "/assets/img/saibaMais/gamboa.png",
     "/assets/img/saibaMais/pelourinho.png": "/assets/img/saibaMais/pelourinho.png",
     "/assets/img/saibaMais/rioVermelho.png": "/assets/img/saibaMais/rioVermelho.png",
