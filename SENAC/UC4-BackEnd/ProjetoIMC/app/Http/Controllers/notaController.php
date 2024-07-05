@@ -14,7 +14,6 @@ class notaController extends Controller
     }
 
     public function create(Request $request) {
-
         $request->validate([
             'nome' => 'required|max:255',
             'nota' => 'required|numeric|min:0|max:10|regex:/^\d+(\.\d{1,2})?$/',

@@ -101,37 +101,37 @@
     </div>
 
     <table class="table">
-    <thead>
-        <tr>
-        <th scope="col">Id</th>
-        <th scope="col">Nome</th>
-        <th scope="col">Nota</th>
-        <th>Ações</th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach ($students as $key => $data)
+        <thead>
             <tr>
-            <th scope="row">{{$data->id}}</th>
-            <td>{{$data->nome}}</td>
-            <td>{{$data->nota}}</td>
-            <td>
-                <form action="{{route('nota.delete', $data->id)}}" method="post">
-                      @csrf
-                      @method('DELETE')
-                      <button type="submit"><i class="bi bi-trash-fill"></i>
-                      </button>
-                </form>
-
-                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#iupdateModal" data-id="{{$data->id}}" data-nome="{{$data->nome}}" data-nota="{{$data->nota}}">
-                    <i class="bi bi-arrow-clockwise"></i>
-                </button>
-                
-            </td>
+            <th scope="col">Id</th>
+            <th scope="col">Nome</th>
+            <th scope="col">Nota</th>
+            <th scope="col">Ações</th>
             </tr>
-        @endforeach
+        </thead>
+        <tbody>
+            @foreach ($students as $key => $data)
+                <tr>
+                <th scope="row">{{$data->id}}</th>
+                <td>{{$data->nome}}</td>
+                <td>{{$data->nota}}</td>
+                <td>
+                    <form action="{{route('nota.delete', $data->id)}}" method="post">
+                        @csrf
+                        @method('DELETE')
+                        <button type="submit"><i class="bi bi-trash-fill"></i>
+                        </button>
+                    </form>
 
-    </tbody>
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#iupdateModal" data-id="{{$data->id}}" data-nome="{{$data->nome}}" data-nota="{{$data->nota}}">
+                        <i class="bi bi-arrow-clockwise"></i>
+                    </button>
+                    
+                </td>
+                </tr>
+            @endforeach
+
+        </tbody>
     </table>
 
     <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
